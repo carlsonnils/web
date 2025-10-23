@@ -24,6 +24,6 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		srcPath = path.Join(SrcDir, r.RequestURI[1:])
 	}
 
-	log.Printf("Home> Client %s | Host %s | srcPath %s\n", r.RemoteAddr, r.Host, srcPath)
+	log.Printf("HomeHandler> srcPath %s\n", srcPath)
 	http.ServeFile(w, r, srcPath)
 }

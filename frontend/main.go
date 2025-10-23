@@ -12,16 +12,23 @@ import (
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 
+	port := "8000"
+	host := "127.0.0.1"
+
 	llb_mux := http.NewServeMux()
 	llb_mux.HandleFunc("GET /", handlers.Home)
 
+	logging_mux := &ServerMux{
+		Mux: llb_mux,
+	}
+
 	mux := http.NewServeMux()
-	mux.Handle("GET 127.0.0.1/", llb_mux)
-	mux.Handle("GET localhost/", llb_mux)	// for dev
+	mux.Handle("GET 127.0.0.1/", logging_mux)
+	mux.Handle("GET localhost/", logging_mux)	// for dev
 
 	go func() {
 		log.Println("Running http server")
-		HTTPServer(mux)
+		HTTPServer(mux, host, port)
 	}()
 	// go func() {
 	// 	log.Println("Starting HTTPS Server")

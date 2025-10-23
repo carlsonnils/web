@@ -5,9 +5,9 @@ import (
 	"net/http"
 )
 
-func HTTPServer(muxer *http.ServeMux) {
+func HTTPServer(muxer *http.ServeMux, host, port string) {
 	server := &http.Server{
-		Addr:    "127.0.0.1:8080",
+		Addr:    host + ":" + port,
 		Handler: muxer,
 	}
 
