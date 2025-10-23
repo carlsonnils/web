@@ -10,7 +10,13 @@ type ServerMux struct {
 }
 
 func (mux *ServerMux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	log.Printf("LoggerMiddleware> REQUEST Client %s | Host %s | Url %s\n", r.RemoteAddr, r.Host, r.RequestURI)
+	log.Printf(
+		"LoggerMiddleware> Request %s | Client %s | Host %s | Url %s\n", 
+		r.Method, 
+		r.RemoteAddr, 
+		r.Host, 
+		r.RequestURI,
+	)
+
 	mux.Mux.ServeHTTP(w, r)
 }
-
