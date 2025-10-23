@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TemP</title>
+        <link rel="stylesheet" href="bolt.css" >
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+#main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: min(5vh, 5vw);
+    margin: 0;
+    min-height: 100vh;
+    & h1 {
+    }
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    border-top: 1px solid rgb(127, 127, 127);
+    margin-bottom: 10vh;
+    & div {
+        margin-top: 2vh;
+    }
+}
+#footer-links {
+    display: flex;
+    justify-content: center;
+    & div {
+        margin: 0px 1vw;
+    }
+}
+#love-note {
+    margin-top: 10vh;
+    color: rgb(from var(--text) r g b / 0.1);
+}
+</style>
+    </head>
+    <body>
+        <div id="main-page">
+            <h1>Temp Page</h1>
+            <p style="max-width: 900px;">
+                attempt to make a decent http server for development and production use. the structure of the
+                package is a wrapper around the net/http standard library. to define a new path on your server
+                create a *http.ServeMux, attach handlers that you create, and then pass the mux to an HTTP or 
+                HTTPS server.
+            </p>
+        </div>
+        <footer>
+            <div id="footer-links">
+                <div><a>carlsonnils@gmail.com</a></div>
+                <div><a>github.com/carlsonnils</a></div>
+            </div>
+            <div id="love-note">made with love</div>
+        </footer>
+    </body>
+</html>
