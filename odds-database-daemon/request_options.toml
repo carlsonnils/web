@@ -1,0 +1,12 @@
+last_request_time = "2025-11-02 22:13:16"
+
+[usage]
+
+[sports]
+all = true
+
+[odds]
+regions = "us"
+markets = "h2h"
+dateFormat = "iso"
+oddsFormat = "decimal"
