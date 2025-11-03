@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>TemP</title>
-        <link rel="stylesheet" href="bolt.css" >
 <style>
 body {
     margin: 0;
@@ -15,8 +14,6 @@ body {
     padding: min(5vh, 5vw);
     margin: 0;
     min-height: 100vh;
-    & h1 {
-    }
 }
 footer {
     display: flex;
@@ -44,13 +41,15 @@ footer {
     </head>
     <body>
         <div id="main-page">
-            <h1>Temp Page</h1>
+            <h1>Odds Database</h1>
             <p style="max-width: 900px;">
-                attempt to make a decent http server for development and production use. the structure of the
-                package is a wrapper around the net/http standard library. to define a new path on your server
-                create a *http.ServeMux, attach handlers that you create, and then pass the mux to an HTTP or 
-                HTTPS server.
+                Daemon to get odds data and inforation.
             </p>
+            <ul>
+                <li>get odds data for all active leagues on a specified list</li>
+                <li>store the data in a database</li>
+                <li>calculate when to request next by calculating request interval after every request has finished</li>
+            </ul>
         </div>
         <footer>
             <div id="footer-links">
