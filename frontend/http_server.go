@@ -11,7 +11,7 @@ func HTTPServer(muxer *http.ServeMux, host, port string) {
 		Handler: muxer,
 	}
 
-	log.Printf("Starting server at https://%s\n", server.Addr)
+	log.Printf("Starting server at http://%s\n", server.Addr)
 
 	err := server.ListenAndServe()
 	if err != nil {
