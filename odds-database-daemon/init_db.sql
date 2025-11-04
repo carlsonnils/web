@@ -15,3 +15,12 @@ CREATE TABLE IF NOT EXISTS odds (
     team_name TEXT,
     price FLOAT
 );
+
+CREATE TABLE IF NOT EXISTS sports (
+    sport_key TEXT UNIQUE, 
+    sport_type TEXT,
+    league TEXT,
+    description TEXT,
+    in_season BOOL,
+    has_outrights BOOL
+);

@@ -1,6 +1,9 @@
-last_request_time = "2025-11-02 22:13:16"
+last_request_time = "2025-11-03 21:54:02"
 
 [usage]
+remaining = 499
+used = 1
+last = 0
 
 [sports]
 all = true
